@@ -29,8 +29,9 @@ const HeroSection = () => {
             </div>
 
             <Button 
+              variant="success"
               size="lg"
-              className="bg-primary hover:bg-primary-hover text-primary-foreground font-semibold px-8 py-6 text-lg shadow-soft"
+              className="font-semibold px-8 py-6 text-lg"
               onClick={scrollToContact}
             >
               Agendar Consulta

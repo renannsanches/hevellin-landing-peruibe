@@ -6,9 +6,11 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,7 +57,12 @@ Mensagem: ${formData.message}`;
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             Agende sua{" "}
             <span className="text-primary">consulta</span>
@@ -64,7 +71,11 @@ Mensagem: ${formData.message}`;
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div 
+            className={`space-y-8 transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}
+          >
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full mt-1">
@@ -119,10 +130,28 @@ Mensagem: ${formData.message}`;
                 </div>
               </div>
             </div>
+
+            {/* Google Maps */}
+            <div className="rounded-2xl overflow-hidden shadow-card">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7234567890123!2d-46.999999!3d-24.319444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDE5JzEwLjAiUyA0NsKwNTknNTkuOSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Clínica Hevellin Andrade"
+              />
+            </div>
           </div>
 
           {/* Contact Form */}
-          <Card className="border-border shadow-card">
+          <Card 
+            className={`border-border shadow-card transition-all duration-1000 delay-300 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-foreground">
                 Envie uma mensagem

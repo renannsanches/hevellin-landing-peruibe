@@ -23,6 +23,15 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 98%;
     --primary-hover: 220 91% 20%;
 
+    /* Success/Green color for buttons */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --success-hover: 142 71% 40%;
+
+    /* Warning/Yellow color for stars */
+    --warning: 43 89% 57%;
+    --warning-foreground: 0 0% 15%;
+
     /* Secondary - soft grays */
     --secondary: 220 9% 92%;
     --secondary-foreground: 220 15% 20%;

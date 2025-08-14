@@ -73,6 +73,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-3 rounded-full hover:bg-primary-foreground/20 transition-colors"
+                aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -81,6 +82,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-3 rounded-full hover:bg-primary-foreground/20 transition-colors"
+                aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
@@ -89,6 +91,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-3 rounded-full hover:bg-primary-foreground/20 transition-colors"
+                aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
