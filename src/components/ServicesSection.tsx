@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Brain, Ear, Eye, Users, Waves } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -53,33 +54,46 @@ const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card 
-                key={index} 
-                className={`border-border hover:shadow-card transition-all duration-1000 group ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <CardHeader className="text-center">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-service-icon" />
-                  </div>
-                  <CardTitle className="text-xl font-semibold text-foreground">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground text-center leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="relative">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <Card 
+                      className={`aspect-square border-border hover:shadow-lg transition-all duration-500 group cursor-pointer ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                      }`}
+                      style={{ transitionDelay: `${index * 150}ms` }}
+                    >
+                      <CardHeader className="text-center h-3/5 flex flex-col justify-center">
+                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                          <IconComponent className="w-10 h-10 text-service-icon" />
+                        </div>
+                      </CardHeader>
+                      <CardContent className="h-2/5 flex flex-col justify-center p-6 pt-0">
+                        <CardTitle className="text-lg font-bold text-foreground mb-3 text-center">
+                          {service.title}
+                        </CardTitle>
+                        <CardDescription className="text-muted-foreground text-center leading-relaxed text-sm">
+                          {service.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="absolute -right-16 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-200 border-gray-200 text-gray-600 h-12 w-12" />
+            <CarouselNext className="absolute -right-2 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-200 border-gray-200 text-gray-600 h-12 w-12" />
+          </Carousel>
         </div>
       </div>
     </section>
