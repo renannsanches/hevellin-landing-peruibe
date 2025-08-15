@@ -68,7 +68,7 @@ const ServicesSection = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {services.map((service, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <Card 
                     className={`aspect-square border-border shadow-md hover:shadow-xl hover:scale-105 transition-all duration-500 group cursor-pointer overflow-hidden ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
