@@ -1,38 +1,42 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Brain, Ear, Eye, Users, Waves } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import dtmImage from "@/assets/dtm-treatment.jpg";
+import vestibularImage from "@/assets/vestibular-rehab.jpg";
+import eyeImage from "@/assets/eye-therapy.jpg";
+import posturalImage from "@/assets/postural-control.jpg";
+import tinnitusImage from "@/assets/tinnitus-treatment.jpg";
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   const services = [
     {
-      icon: Brain,
+      image: dtmImage,
       title: "DTM e Cefaleia",
       description: "Tratamento especializado para dores na face, cabeça e mandíbula, trazendo alívio e qualidade de vida.",
       keyword: "tratamento DTM Peruíbe"
     },
     {
-      icon: Ear,
+      image: vestibularImage,
       title: "Reabilitação Vestibular", 
       description: "Melhore equilíbrio, reduza tonturas e recupere a confiança nos movimentos.",
       keyword: "reabilitação vestibular Peruíbe"
     },
     {
-      icon: Eye,
+      image: eyeImage,
       title: "Fisioterapia Ocular",
       description: "Recupere funções oculares e alivie desconfortos relacionados à visão.",
       keyword: "fisioterapia ocular"
     },
     {
-      icon: Users,
+      image: posturalImage,
       title: "Controle Postural",
       description: "Aprimore sua postura e previna dores com técnicas avançadas e personalizadas.",
       keyword: "controle postural Peruíbe"
     },
     {
-      icon: Waves,
+      image: tinnitusImage,
       title: "Zumbido Somatossensorial",
       description: "Abordagem fisioterapêutica para reduzir o incômodo do zumbido e melhorar o bem-estar.",
       keyword: "tratamento zumbido Peruíbe"
@@ -63,33 +67,32 @@ const ServicesSection = () => {
             }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Card 
-                      className={`aspect-square border-border hover:shadow-lg transition-all duration-500 group cursor-pointer ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                      }`}
-                      style={{ transitionDelay: `${index * 150}ms` }}
-                    >
-                      <CardHeader className="text-center h-3/5 flex flex-col justify-center">
-                        <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                          <IconComponent className="w-10 h-10 text-service-icon" />
-                        </div>
-                      </CardHeader>
-                      <CardContent className="h-2/5 flex flex-col justify-center p-6 pt-0">
-                        <CardTitle className="text-lg font-bold text-foreground mb-3 text-center">
-                          {service.title}
-                        </CardTitle>
-                        <CardDescription className="text-muted-foreground text-center leading-relaxed text-sm">
-                          {service.description}
-                        </CardDescription>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                );
-              })}
+              {services.map((service, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <Card 
+                    className={`aspect-square border-border shadow-md hover:shadow-xl hover:scale-105 transition-all duration-500 group cursor-pointer overflow-hidden ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                    style={{ transitionDelay: `${index * 150}ms` }}
+                  >
+                    <div className="h-3/5 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="h-2/5 flex flex-col justify-center p-6">
+                      <CardTitle className="text-lg font-bold text-foreground mb-3 text-center">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-muted-foreground text-center leading-relaxed text-sm">
+                        {service.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious className="absolute -right-16 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-200 border-gray-200 text-gray-600 h-12 w-12" />
             <CarouselNext className="absolute -right-2 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-gray-200 border-gray-200 text-gray-600 h-12 w-12" />
