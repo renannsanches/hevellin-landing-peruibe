@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Target, Heart, Lightbulb } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const HeroSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -14,7 +17,12 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh] py-12">
           {/* Content */}
-          <div className="space-y-8">
+          <div 
+            ref={ref}
+            className={`space-y-8 transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-serif font-semibold text-foreground leading-tight">
                 Fisioterapia Especializada para{" "}
@@ -63,7 +71,11 @@ const HeroSection = () => {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center lg:justify-end">
+          <div 
+            className={`flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-hero rounded-3xl transform rotate-3 opacity-20"></div>
               <img 

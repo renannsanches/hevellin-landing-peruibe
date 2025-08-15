@@ -75,7 +75,8 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'service-icon': '#92D1B6'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

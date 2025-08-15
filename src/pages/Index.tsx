@@ -6,7 +6,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
-      <WhatsAppFloat />
     </div>
   );
 };

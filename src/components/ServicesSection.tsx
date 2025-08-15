@@ -1,7 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Ear, Eye, Users, Waves } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ServicesSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const services = [
     {
       icon: Brain,
@@ -38,7 +41,12 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6">
             Especialidades que{" "}
             <span className="text-primary">transformam vidas</span>
@@ -49,10 +57,16 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="border-border hover:shadow-card transition-all duration-300 group">
+              <Card 
+                key={index} 
+                className={`border-border hover:shadow-card transition-all duration-1000 group ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
                 <CardHeader className="text-center">
                   <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-primary" />
+                    <IconComponent className="w-8 h-8 text-service-icon" />
                   </div>
                   <CardTitle className="text-xl font-semibold text-foreground">
                     {service.title}
