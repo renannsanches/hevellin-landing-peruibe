@@ -58,6 +58,9 @@ All colors MUST be HSL.
     --shadow-soft: 0 4px 20px -4px hsl(220 91% 25% / 0.1);
     --shadow-card: 0 2px 12px -2px hsl(220 91% 25% / 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Hero section colors */
+    --hero-green: 142 38% 70%; /* #92D1B6 */
 
     --sidebar-background: 0 0% 98%;
 
