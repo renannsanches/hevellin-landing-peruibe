@@ -70,7 +70,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Generated Image Placeholder */}
+          {/* Professional Image */}
           <div 
             className={`flex justify-center lg:justify-start transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -78,11 +78,12 @@ const AboutSection = () => {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-primary/10 rounded-3xl transform -rotate-3"></div>
-              <div className="relative bg-muted rounded-3xl p-8 w-full max-w-md h-80 flex items-center justify-center shadow-card">
-                <div className="text-center text-muted-foreground">
-                  <div className="text-4xl mb-4">👩‍⚕️</div>
-                  <p className="text-sm">Imagem profissional da<br />Dra. Hevellin atendendo</p>
-                </div>
+              <div className="relative rounded-3xl overflow-hidden w-full max-w-md h-80 shadow-card">
+                <img 
+                  src="/lovable-uploads/hevellin.png" 
+                  alt="Dra. Hevellin Andrade - Fisioterapeuta especializada atendendo paciente"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
