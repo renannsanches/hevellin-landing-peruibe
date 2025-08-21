@@ -7,7 +7,7 @@ import { useBackgroundRemoval } from "@/hooks/useBackgroundRemoval";
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { processedImageUrl, isProcessing } = useBackgroundRemoval("/lovable-uploads/5078a0fc-7a9e-4aad-8c37-790e90eeaea2.png");
+  const { processedImageUrl, isProcessing } = useBackgroundRemoval("/lovable-uploads/20d5703d-e422-4845-b641-0827299dea49.png");
   
   const backgroundImages = [
     "/lovable-uploads/03ec9a41-f7e3-4823-aee4-22fd9176bdf8.png",
@@ -87,22 +87,22 @@ const HeroSection = () => {
             {/* Diferenciais */}
             <div className="grid md:grid-cols-3 gap-6 pt-8">
               <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
-                  <Target className="w-6 h-6 text-white" />
+                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+                  <Target className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
                 <span className="font-medium text-white">Especialização técnica</span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
-                  <Heart className="w-6 h-6 text-white" />
+                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+                  <Heart className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
                 <span className="font-medium text-white">Atendimento humanizado</span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+                  <Lightbulb className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
                 <span className="font-medium text-white">Técnicas exclusivas e inovadoras</span>
               </div>
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 </div>
               ) : (
                 <img 
-                  src={processedImageUrl || "/lovable-uploads/5078a0fc-7a9e-4aad-8c37-790e90eeaea2.png"} 
+                  src={processedImageUrl || "/lovable-uploads/20d5703d-e422-4845-b641-0827299dea49.png"} 
                   alt="Dra. Hevellin Andrade - Fisioterapeuta especializada" 
                   className="relative w-full max-w-md lg:max-w-lg h-auto object-cover"
                 />
