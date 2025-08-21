@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Target, Heart, Lightbulb } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState, useEffect } from "react";
+import { useBackgroundRemoval } from "@/hooks/useBackgroundRemoval";
 
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { processedImageUrl, isProcessing } = useBackgroundRemoval("/lovable-uploads/5078a0fc-7a9e-4aad-8c37-790e90eeaea2.png");
   
   const backgroundImages = [
     "/lovable-uploads/03ec9a41-f7e3-4823-aee4-22fd9176bdf8.png",
@@ -85,22 +87,22 @@ const HeroSection = () => {
             {/* Diferenciais */}
             <div className="grid md:grid-cols-3 gap-6 pt-8">
               <div className="flex items-center space-x-3">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Target className="w-6 h-6 text-primary" />
+                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
+                  <Target className="w-6 h-6 text-white" />
                 </div>
                 <span className="font-medium text-white">Especialização técnica</span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Heart className="w-6 h-6 text-primary" />
+                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
                 <span className="font-medium text-white">Atendimento humanizado</span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Lightbulb className="w-6 h-6 text-primary" />
+                <div className="p-3 rounded-full" style={{backgroundColor: '#92D1B6'}}>
+                  <Lightbulb className="w-6 h-6 text-white" />
                 </div>
                 <span className="font-medium text-white">Técnicas exclusivas e inovadoras</span>
               </div>
@@ -109,17 +111,22 @@ const HeroSection = () => {
 
           {/* Image - Hidden on mobile */}
           <div 
-            className={`hidden lg:flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
+            className={`hidden lg:flex justify-center lg:justify-end items-end transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-hero rounded-3xl transform rotate-3 opacity-20"></div>
-              <img 
-                src="/lovable-uploads/5078a0fc-7a9e-4aad-8c37-790e90eeaea2.png" 
-                alt="Dra. Hevellin Andrade - Fisioterapeuta especializada" 
-                className="relative w-full max-w-md lg:max-w-lg h-auto object-cover rounded-3xl shadow-soft"
-              />
+              {isProcessing ? (
+                <div className="w-full max-w-md lg:max-w-lg h-96 bg-white/10 rounded-3xl flex items-center justify-center">
+                  <div className="text-white">Processando imagem...</div>
+                </div>
+              ) : (
+                <img 
+                  src={processedImageUrl || "/lovable-uploads/5078a0fc-7a9e-4aad-8c37-790e90eeaea2.png"} 
+                  alt="Dra. Hevellin Andrade - Fisioterapeuta especializada" 
+                  className="relative w-full max-w-md lg:max-w-lg h-auto object-cover"
+                />
+              )}
             </div>
           </div>
         </div>
