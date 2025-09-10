@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Target, Heart, Lightbulb } from "lucide-react";
+import { Target, Heart, Lightbulb, Car } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState, useEffect } from "react";
 
@@ -113,26 +113,33 @@ const HeroSection = () => {
             </Button>
 
             {/* Diferenciais */}
-            <div className="grid md:grid-cols-3 gap-6 pt-8">
-              <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-8">
+              <div className="flex items-center space-x-4 min-w-0">
+                <div className="p-3 rounded-full bg-[#92D1B6]/20 flex-shrink-0">
                   <Target className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
-                <span className="font-medium text-white">Especialização técnica</span>
+                <span className="font-medium text-white text-sm leading-tight">Especialização técnica</span>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+              <div className="flex items-center space-x-4 min-w-0">
+                <div className="p-3 rounded-full bg-[#92D1B6]/20 flex-shrink-0">
                   <Heart className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
-                <span className="font-medium text-white">Atendimento humanizado</span>
+                <span className="font-medium text-white text-sm leading-tight">Atendimento humanizado</span>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-full bg-[#92D1B6]/20">
+              <div className="flex items-center space-x-4 min-w-0">
+                <div className="p-3 rounded-full bg-[#92D1B6]/20 flex-shrink-0">
                   <Lightbulb className="w-6 h-6" style={{color: '#92D1B6'}} />
                 </div>
-                <span className="font-medium text-white">Técnicas exclusivas e inovadoras</span>
+                <span className="font-medium text-white text-sm leading-tight">Técnicas inovadoras</span>
+              </div>
+
+              <div className="flex items-center space-x-4 min-w-0">
+                <div className="p-3 rounded-full bg-[#92D1B6]/20 flex-shrink-0">
+                  <Car className="w-6 h-6" style={{color: '#92D1B6'}} />
+                </div>
+                <span className="font-medium text-white text-sm leading-tight">Sistema Leva e Traz de Pacientes</span>
               </div>
             </div>
           </div>

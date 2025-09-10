@@ -29,6 +29,10 @@ const FAQSection = () => {
     {
       question: "Qual a duração de cada sessão?",
       answer: "Cada sessão tem duração aproximada de 50 minutos, tempo suficiente para realizar todas as técnicas necessárias com qualidade e atenção individualizada."
+    },
+    {
+      question: "Vocês oferecem transporte para pacientes?",
+      answer: "Sim! Oferecemos o sistema Leva e Traz especialmente para pacientes idosos ou com dificuldades de locomoção. Buscamos o paciente em casa, aguardamos durante toda a sessão e levamos de volta ao final do tratamento. Este serviço é ideal para quem tem dificuldade para pedir Uber, táxi ou não tem acompanhante disponível."
     }
   ];
 

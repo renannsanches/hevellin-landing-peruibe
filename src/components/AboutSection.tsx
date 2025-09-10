@@ -6,8 +6,8 @@ import { useCountUp } from "@/hooks/useCountUp";
 const AboutSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const experienceCount = useCountUp(14, 2000, isVisible);
-  const patientsCount = useCountUp(500, 2000, isVisible);
-  const successRate = useCountUp(95, 2000, isVisible);
+  const patientsCount = useCountUp(600, 2000, isVisible);
+  const successRate = useCountUp(100, 2000, isVisible);
 
   return (
     <section id="about" className="py-20 bg-gradient-subtle">

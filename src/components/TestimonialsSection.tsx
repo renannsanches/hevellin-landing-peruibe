@@ -6,22 +6,22 @@ const TestimonialsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const testimonials = [
     {
-      name: "Maria S.",
+      name: "Maria Silva",
       text: "Após iniciar o tratamento com a Dra. Hevellin, minhas dores de cabeça diminuíram muito e minha postura melhorou. Atendimento excelente e acolhedor!",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b55c?w=150&h=150&fit=crop&crop=face"
+      avatar: "/lovable-uploads/maria.jpeg"
     },
     {
-      name: "João P.",
+      name: "Edmar Santos Jr",
       text: "Sofria com tonturas há anos. Após o tratamento de reabilitação vestibular, recuperei minha confiança para caminhar e dirigir. Muito grato!",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      avatar: "/lovable-uploads/edmar.jpeg"
     },
     {
-      name: "Ana L.",
+      name: "Odete Alves",
       text: "O tratamento para DTM foi fundamental para melhorar minha qualidade de vida. Profissional competente e muito atenciosa.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      avatar: "/lovable-uploads/odete.jpeg"
     }
   ];
 

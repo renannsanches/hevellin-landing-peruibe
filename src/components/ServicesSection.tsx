@@ -6,6 +6,8 @@ import vestibularImage from "@/assets/vestibular-rehab.jpg";
 import eyeImage from "@/assets/eye-therapy.jpg";
 import posturalImage from "@/assets/postural-control.jpg";
 import tinnitusImage from "@/assets/tinnitus-treatment.jpg";
+import cefaleia from "@/assets/cefaleia.jpg";
+import paralisia from "@/assets/paralisiafacial.jpg";
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -13,9 +15,15 @@ const ServicesSection = () => {
   const services = [
     {
       image: dtmImage,
-      title: "DTM e Cefaleia",
-      description: "Tratamento especializado para dores na face, cabeça e mandíbula, trazendo alívio e qualidade de vida.",
+      title: "DTM",
+      description: "Tratamento especializado para disfunção temporomandibular, aliviando dores na face e mandíbula.",
       keyword: "tratamento DTM Peruíbe"
+    },
+    {
+      image: cefaleia,
+      title: "Cefaleia",
+      description: "Tratamento especializado para dores de cabeça e enxaquecas, proporcionando alívio e qualidade de vida.",
+      keyword: "tratamento cefaleia Peruíbe"
     },
     {
       image: vestibularImage,
@@ -40,6 +48,12 @@ const ServicesSection = () => {
       title: "Zumbido Somatossensorial",
       description: "Abordagem fisioterapêutica para reduzir o incômodo do zumbido e melhorar o bem-estar.",
       keyword: "tratamento zumbido Peruíbe"
+    },
+    {
+      image: paralisia,
+      title: "Paralisia Facial",
+      description: "Reabilitação especializada para recuperação da função facial e melhora da expressão.",
+      keyword: "tratamento paralisia facial Peruíbe"
     }
   ];
 
