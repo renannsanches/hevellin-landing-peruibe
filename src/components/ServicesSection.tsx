@@ -11,7 +11,7 @@ import paralisia from "@/assets/paralisiafacial.jpg";
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  
+
   const services = [
     {
       image: dtmImage,
@@ -27,7 +27,7 @@ const ServicesSection = () => {
     },
     {
       image: vestibularImage,
-      title: "Reabilitação Vestibular", 
+      title: "Reabilitação Vestibular",
       description: "Programa de fisioterapia indicado para quem sofre com tonturas, vertigens e desequilíbrio. O tratamento auxilia na adaptação do sistema vestibular e na recuperação da confiança nos movimentos.",
       keyword: "reabilitação vestibular em Peruíbe"
     },
@@ -60,7 +60,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div 
+        <div
           ref={ref}
           className={`text-center mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -72,8 +72,8 @@ const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="relative">
-          <Carousel 
+        <div className="relative pb-16">
+          <Carousel
             className="w-full"
             opts={{
               align: "start",
@@ -84,23 +84,23 @@ const ServicesSection = () => {
               {services.map((service, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <Card
-                    className={`aspect-square border-border shadow-md hover:shadow-xl transition-all duration-500 group cursor-pointer overflow-hidden ${
+                    className={`h-[400px] border-border shadow-md hover:shadow-xl transition-all duration-500 group cursor-pointer overflow-hidden ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                     style={{ transitionDelay: `${index * 150}ms` }}
                   >
-                    <div className="h-3/5 overflow-hidden">
-                      <img 
-                        src={service.image} 
+                    <div className="h-48 overflow-hidden">
+                      <img
+                        src={service.image}
                         alt={service.title}
                         className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <CardContent className="h-2/5 flex flex-col justify-center p-6">
-                      <CardTitle className="text-lg font-bold text-foreground mb-3 text-center">
+                    <CardContent className="flex-1 flex flex-col justify-between p-4">
+                      <CardTitle className="text-xl font-bold text-foreground mb-2 text-center">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-muted-foreground text-center leading-relaxed text-sm">
+                      <CardDescription className="text-muted-foreground text-center leading-tight text-sm line-clamp-6 overflow-hidden">
                         {service.description}
                       </CardDescription>
                     </CardContent>
