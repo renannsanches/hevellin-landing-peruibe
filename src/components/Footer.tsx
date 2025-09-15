@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Redes Sociais</h3>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/hevellinandrade" 
+                href="https://instagram.com/hevellin.andrade" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-3 rounded-full hover:bg-primary-foreground/20 transition-colors"
@@ -87,7 +87,7 @@ const Footer = () => {
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a 
-                href="https://facebook.com/hevellinandrade" 
+                href="https://facebook.com/andrade.hevellin" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-3 rounded-full hover:bg-primary-foreground/20 transition-colors"

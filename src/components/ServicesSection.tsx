@@ -16,44 +16,44 @@ const ServicesSection = () => {
     {
       image: dtmImage,
       title: "DTM",
-      description: "Tratamento especializado para disfunção temporomandibular, aliviando dores na face e mandíbula.",
-      keyword: "tratamento DTM Peruíbe"
+      description: "Tratamento fisioterapêutico especializado para disfunção temporomandibular (DTM), ajudando a reduzir dores na face, mandíbula e região cervical, além de melhorar a função mastigatória.",
+      keyword: "tratamento DTM em Peruíbe"
     },
     {
       image: cefaleia,
       title: "Cefaleia",
-      description: "Tratamento especializado para dores de cabeça e enxaquecas, proporcionando alívio e qualidade de vida.",
-      keyword: "tratamento cefaleia Peruíbe"
+      description: "Abordagem fisioterapêutica para dores de cabeça e enxaquecas, com técnicas que aliviam a tensão muscular, reduzem crises e promovem mais qualidade de vida.",
+      keyword: "tratamento cefaleia em Peruíbe"
     },
     {
       image: vestibularImage,
       title: "Reabilitação Vestibular", 
-      description: "Melhore equilíbrio, reduza tonturas e recupere a confiança nos movimentos.",
-      keyword: "reabilitação vestibular Peruíbe"
+      description: "Programa de fisioterapia indicado para quem sofre com tonturas, vertigens e desequilíbrio. O tratamento auxilia na adaptação do sistema vestibular e na recuperação da confiança nos movimentos.",
+      keyword: "reabilitação vestibular em Peruíbe"
     },
     {
       image: eyeImage,
       title: "Fisioterapia Ocular",
-      description: "Recupere funções oculares e alivie desconfortos relacionados à visão.",
-      keyword: "fisioterapia ocular"
+      description: "Fisioterapia voltada para a reabilitação dos músculos extraoculares, auxiliando em distúrbios como estrabismo, fadiga ocular e dificuldades de coordenação visual, sem prometer melhora direta da visão.",
+      keyword: "fisioterapia ocular em Peruíbe"
     },
     {
       image: posturalImage,
       title: "Controle Postural",
-      description: "Aprimore sua postura e previna dores com técnicas avançadas e personalizadas.",
-      keyword: "controle postural Peruíbe"
+      description: "Tratamento fisioterapêutico que avalia e corrige desequilíbrios posturais, prevenindo dores na coluna, ombros e pescoço. Indicado para todas as idades, com foco em saúde e bem-estar.",
+      keyword: "controle postural em Peruíbe"
     },
     {
       image: tinnitusImage,
       title: "Zumbido Somatossensorial",
-      description: "Abordagem fisioterapêutica para reduzir o incômodo do zumbido e melhorar o bem-estar.",
-      keyword: "tratamento zumbido Peruíbe"
+      description: "Tratamento fisioterapêutico direcionado ao zumbido somatossensorial, ajudando a reduzir a intensidade do incômodo por meio da reeducação muscular e melhora da função cervical e mandibular.",
+      keyword: "tratamento zumbido em Peruíbe"
     },
     {
       image: paralisia,
       title: "Paralisia Facial",
-      description: "Reabilitação especializada para recuperação da função facial e melhora da expressão.",
-      keyword: "tratamento paralisia facial Peruíbe"
+      description: "Reabilitação fisioterapêutica especializada para paralisia facial, com exercícios que estimulam a recuperação da mobilidade, da simetria e da expressão facial.",
+      keyword: "tratamento paralisia facial em Peruíbe"
     }
   ];
 
