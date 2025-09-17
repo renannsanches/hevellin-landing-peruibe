@@ -8,7 +8,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FAQSection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  
+
   const faqs = [
     {
       question: "O tratamento dói?",
@@ -38,9 +38,9 @@ const FAQSection = () => {
 
   return (
     <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div 
+          <div
             ref={ref}
             className={`text-center mb-16 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -54,18 +54,18 @@ const FAQSection = () => {
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
-                className={`bg-card border border-border rounded-lg px-6 transition-all duration-1000 ${
+                className={`bg-card border border-border rounded-lg overflow-hidden transition-all duration-1000 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <AccordionTrigger className="text-left text-white font-medium hover:text-primary bg-primary rounded-t-lg px-4 py-4 -mx-6 -mt-0">
+                <AccordionTrigger className="text-left text-white font-medium hover:text-white hover:bg-primary-hover bg-primary px-4 py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground leading-relaxed bg-white px-4 py-4 -mx-6 rounded-b-lg">
+                <AccordionContent className="text-foreground leading-relaxed bg-white px-4 py-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

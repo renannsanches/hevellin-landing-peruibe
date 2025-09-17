@@ -80,7 +80,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-primary/10 rounded-3xl transform -rotate-3"></div>
               <div className="relative rounded-3xl overflow-hidden w-full max-w-md h-80 shadow-card">
                 <img 
-                  src="/lovable-uploads/hevellin.png" 
+                  src="/lovable-uploads/hevellin.webp" 
                   alt="Dra. Hevellin Andrade - Fisioterapeuta especializada atendendo paciente"
                   className="w-full h-full object-cover"
                 />

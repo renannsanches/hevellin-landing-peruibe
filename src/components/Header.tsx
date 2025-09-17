@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/lovable-uploads/815697f1-4a1d-4dd6-a794-45f67a1cb7c5.png"
+              src="/lovable-uploads/815697f1-4a1d-4dd6-a794-45f67a1cb7c5.webp"
               alt="Hevellin Andrade Fisioterapia"
               className="h-12 w-auto"
             />

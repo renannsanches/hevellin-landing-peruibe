@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import dtmImage from "@/assets/dtm-treatment.jpg";
-import vestibularImage from "@/assets/vestibular-rehab.jpg";
-import eyeImage from "@/assets/eye-therapy.jpg";
-import posturalImage from "@/assets/postural-control.jpg";
-import tinnitusImage from "@/assets/tinnitus-treatment.jpg";
-import cefaleia from "@/assets/cefaleia.jpg";
-import paralisia from "@/assets/paralisiafacial.jpg";
+import dtmImage from "@/assets/dtm-treatment.webp";
+import vestibularImage from "@/assets/vestibular-rehab.webp";
+import eyeImage from "@/assets/eye-therapy.webp";
+import posturalImage from "@/assets/postural-control.webp";
+import tinnitusImage from "@/assets/tinnitus-treatment.webp";
+import cefaleia from "@/assets/cefaleia.webp";
+import paralisia from "@/assets/paralisiafacial.webp";
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation();

@@ -6,20 +6,20 @@ import { useState, useEffect } from "react";
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const imageUrl = "/lovable-uploads/hevellin2.png";
+  const imageUrl = "/lovable-uploads/hevellin2.webp";
 
   // Imagens para Desktop
   const desktopBackgroundImages = [
-    "/lovable-uploads/desktop-1.png",
-    "/lovable-uploads/desktop-2.png",
-    "/lovable-uploads/desktop-3.png"
+    "/lovable-uploads/desktop-1.webp",
+    "/lovable-uploads/desktop-2.webp",
+    "/lovable-uploads/desktop-3.webp"
   ];
 
   // Imagens para Mobile
   const mobileBackgroundImages = [
-    "/lovable-uploads/mobile-1.png",
-    "/lovable-uploads/mobile-2.png",
-    "/lovable-uploads/mobile-3.png"
+    "/lovable-uploads/mobile-1.webp",
+    "/lovable-uploads/mobile-2.webp",
+    "/lovable-uploads/mobile-3.webp"
   ];
 
   useEffect(() => {
