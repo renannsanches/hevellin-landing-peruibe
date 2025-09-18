@@ -9,19 +9,19 @@ const TestimonialsSection = () => {
       name: "Maria Silva",
       text: "Após iniciar o tratamento com a Dra. Hevellin, minhas dores de cabeça diminuíram muito e minha postura melhorou. Atendimento excelente e acolhedor!",
       rating: 5,
-      avatar: "/lovable-uploads/maria.jpeg"
+      avatar: "/lovable-uploads/maria.webp"
     },
     {
       name: "Edmar Santos Jr",
       text: "Sofria com tonturas há anos. Após o tratamento de reabilitação vestibular, recuperei minha confiança para caminhar e dirigir. Muito grato!",
       rating: 5,
-      avatar: "/lovable-uploads/edmar.jpeg"
+      avatar: "/lovable-uploads/edmar.webp"
     },
     {
       name: "Odete Alves",
       text: "O tratamento para DTM foi fundamental para melhorar minha qualidade de vida. Profissional competente e muito atenciosa.",
       rating: 5,
-      avatar: "/lovable-uploads/odete.jpeg"
+      avatar: "/lovable-uploads/odete.webp"
     }
   ];
 
